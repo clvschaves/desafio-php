@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 
 class AlunoController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {      
-        $alunos = Aluno::paginate(env("PAGINACAO"));
+        $alunos = Aluno::where('name', 'like', '%' . $request->search . '%')
+        ->orWhere('email', 'like', '%' . $request->search . '%')
+        ->paginate(env("PAGINACAO"))->withQueryString();
 
         return view("adm.alunos.aluno", [
             "alunos" => $alunos
