@@ -25,7 +25,7 @@ class AlunoRequest extends FormRequest
     {
         return [
             "name" => "required|string",
-            "email" => "required|string",
+            "email" => "required|string|unique:alunos,email,$this->id",
             "date" => "string",
         ];
     }
