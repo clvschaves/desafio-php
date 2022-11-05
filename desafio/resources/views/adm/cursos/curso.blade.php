@@ -1,6 +1,27 @@
 @extends('adm.layouts.default')
 
 @section('content')
+
+<form action="{{route("curso.index")}}" method="GET">
+
+    <div class="row valign-wrapper">
+        
+        <div class="input-field col s3">
+            <input value="{{request()->search}}" type="text" name="search" id="search" />
+            <label for="titulo">Titulo</label>
+        </div>
+    
+    </div>
+    
+    <div class="right-align">
+        <a href="{{route("curso.index")}}" class="btn-flat">Exibir Todos</a>
+        <button type="submit" class="btn waves-effect waves-light">
+            Pesquisar
+        </button>
+    </div>
+    
+    </form>
+
     <section class="section">
         <table class="highlight">
             <thead>

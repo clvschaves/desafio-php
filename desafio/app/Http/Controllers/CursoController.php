@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 
 class CursoController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {      
-        $cursos = Curso::paginate(env("PAGINACAO"));
+        $cursos = Curso::where('title', 'like', '%' . $request->search . '%')
+        ->paginate(env("PAGINACAO"))->withQueryString();
         return view("adm.cursos.curso", [
             "cursos" => $cursos
         ]);
