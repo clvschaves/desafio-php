@@ -10,7 +10,7 @@
     
     <div class="input-field col s3">
         <input value="{{request()->search}}" type="text" name="search" id="search" />
-        <label for="name">Nome</label>
+        <label for="name">Nome ou Email</label>
     </div>
 
 </div>
