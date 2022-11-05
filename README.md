@@ -1,4 +1,9 @@
+## PROJETO REALIZADO EM LARAVEL 9, BANCO GERADO ATRAVÉS DE MIGRATIONS
+
+
+
 # SELEÇÃO PÚBLICA SIMPLIFICADA DE TRANSFORMAÇÃO DIGITAL
+
 ___
 ## desafio-php
 
@@ -9,7 +14,7 @@ administrativo.
 ## Requisitos
 * Um aluno pode ser matriculado em mais de um curso
 * O administrador do sistema realizará as matrículas. Não é necessário
-desenvolver tela para alunos.
+  desenvolver tela para alunos.
 * A consulta pelo nome e pelo e-mail é requisito funcional
 * Não é necessário desenvolver tela de login / autenticação.
 
